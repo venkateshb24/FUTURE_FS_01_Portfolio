@@ -522,3 +522,122 @@ body {
   background: #bae6fd;
   color: #334155;
 }
+.skills-section {
+  min-height: 100vh;
+  background: #f0f9ff;
+  padding: 80px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: skillsFadeIn 1s cubic-bezier(0.4,0,0.2,1) both;
+}
+@keyframes skillsFadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.skills-title {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0e7490;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.skills-cards-row {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 1000px) {
+  .skills-cards-row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+  }
+}
+.skills-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(14, 165, 233, 0.10);
+  padding: 32px 24px;
+  width: 340px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.skills-card:hover {
+  box-shadow: 0 8px 32px rgba(14, 165, 233, 0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+.skills-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0e7490;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.skills-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.skills-list-item {
+  background: #f0f9ff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.06);
+  margin-bottom: 16px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #334155;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.skills-list-item:last-child {
+  margin-bottom: 0;
+}
+.skills-list-item:hover {
+  background: #e0f2fe;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.10);
+  transform: scale(1.03);
+}
+.skills-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.skills-level {
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 5px 16px;
+  margin-left: 10px;
+  background: #e0f2fe;
+  color: #0e7490;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s;
+}
+.skills-level.exp {
+  background: #c7f9e5;
+  color: #059669;
+}
+.skills-level.int {
+  background: #fef9c3;
+  color: #b45309;
+}
+.skills-level.basic, .skills-level.beg {
+  background: #f0f9ff;
+  color: #0ea5e9;
+}
